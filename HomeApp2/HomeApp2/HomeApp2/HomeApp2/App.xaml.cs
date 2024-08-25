@@ -12,7 +12,7 @@ namespace HomeApp2
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new RegisterPage();
+            MainPage = new DevicesPage();
         }
 
         protected override void OnStart()

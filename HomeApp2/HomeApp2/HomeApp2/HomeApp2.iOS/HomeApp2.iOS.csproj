@@ -142,4 +142,7 @@
       <Name>HomeApp2</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HomeBackground.jpeg" />
+  </ItemGroup>
 </Project>
