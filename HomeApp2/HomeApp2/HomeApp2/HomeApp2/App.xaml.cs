@@ -1,8 +1,6 @@
 ﻿using HomeApp2.Services;
 using HomeApp2.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace HomeApp2
 {
@@ -14,7 +12,7 @@ namespace HomeApp2
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new RegisterPage();
         }
 
         protected override void OnStart()
