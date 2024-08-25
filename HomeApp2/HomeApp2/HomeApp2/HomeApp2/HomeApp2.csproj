@@ -16,11 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image\kettle.jpeg" />
+    <EmbeddedResource Include="Image\kettle.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\ClimatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DeviceContolPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\DevicesPage.xaml">
