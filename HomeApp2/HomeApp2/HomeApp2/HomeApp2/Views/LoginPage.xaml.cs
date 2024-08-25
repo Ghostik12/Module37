@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Java.Nio.Channels;
+using System;
 using System.Linq;
 using Xamarin.Forms;
 
@@ -12,9 +13,19 @@ namespace HomeApp2.Views
         // Переменная счетчика
         public static int loginCouner = 0;
 
+        // Создаем объект, возвращающий свойства устройства
+        IDeviceDetector detector = DependencyService.Get<IDeviceDetector>();
+
         public LoginPage()
         {
             InitializeComponent();
+
+            // Изменяем внешний вид кнопки для Desktop-версии
+            if (Device.Idiom == TargetIdiom.Desktop)
+                loginButton.CornerRadius = 0;
+
+            // Передаем информацию о платформе на экран
+            runningDevice.Text = detector.GetDevice();
         }
 
         /// <summary>
