@@ -5,9 +5,21 @@
             x:Class="HomeApp2.Views.RegisterPage"
             BackgroundImageSource="HomeBackground.jpeg">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Style.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <local:EmailTriggerAction />
+                    </EventTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <StackLayout VerticalOptions="Center"  HorizontalOptions="Center"  x:Name="stackLayout">
         <Entry  x:Name="placeHolder" Placeholder="Type your e-mail.." FontSize="Title" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" PlaceholderColor="SkyBlue" />
-        <Button x:Name="loginButton" Text="Register" Opacity="0.8"/>
+        <Button x:Name="loginButton" Text="Register" Opacity="0.8" Style="{StaticResource buttonStyle}"/>
         <Label Text="Already have an account" FontSize="Subtitle"  Padding="30,10,30,10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="LightBlue"/>
     </StackLayout>
 </ContentPage>
